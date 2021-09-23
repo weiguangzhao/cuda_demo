@@ -1,0 +1,3 @@
+/home/bruno/Documents/Clion_Project/cuda_demo/demo1_square/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/bruno/Documents/Clion_Project/cuda_demo/demo1_square/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bruno/Documents/Clion_Project/cuda_demo/demo1_square/cmake-build-debug/CMakeFiles/demo1_square.dir
