@@ -1,3 +1,0 @@
-/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/AdjacentPoint.dir

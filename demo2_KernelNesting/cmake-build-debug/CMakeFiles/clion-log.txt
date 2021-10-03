@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /home/bruno/Documents/Clion_Project/cuda_demo/demo2_KernelNesting Select CMakeLists.txt
