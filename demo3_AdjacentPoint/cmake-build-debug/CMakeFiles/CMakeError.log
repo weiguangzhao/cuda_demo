@@ -1,0 +1,64 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d4c18/fast && /usr/bin/make  -f CMakeFiles/cmTC_d4c18.dir/build.make CMakeFiles/cmTC_d4c18.dir/build
+make[1]: Entering directory '/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d4c18.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_d4c18.dir/src.c.o -c /home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d4c18
+/home/bruno/Public/software/Clion/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4c18.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  CMakeFiles/cmTC_d4c18.dir/src.c.o -o cmTC_d4c18 
+CMakeFiles/cmTC_d4c18.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d4c18.dir/build.make:105: recipe for target 'cmTC_d4c18' failed
+make[1]: *** [cmTC_d4c18] Error 1
+make[1]: Leaving directory '/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_d4c18/fast' failed
+make: *** [cmTC_d4c18/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5636e/fast && /usr/bin/make  -f CMakeFiles/cmTC_5636e.dir/build.make CMakeFiles/cmTC_5636e.dir/build
+make[1]: Entering directory '/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5636e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_5636e.dir/CheckFunctionExists.c.o -c /home/bruno/Public/software/Clion/CLion-2021.1/clion-2021.1/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5636e
+/home/bruno/Public/software/Clion/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5636e.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_5636e.dir/CheckFunctionExists.c.o -o cmTC_5636e  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5636e.dir/build.make:105: recipe for target 'cmTC_5636e' failed
+make[1]: *** [cmTC_5636e] Error 1
+make[1]: Leaving directory '/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_5636e/fast' failed
+make: *** [cmTC_5636e/fast] Error 2
+
+
+

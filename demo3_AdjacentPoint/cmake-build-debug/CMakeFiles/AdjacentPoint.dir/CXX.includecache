@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/AdjacentPoint.h
+
+/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/main.cpp
+iostream
+-
+vector
+-
+string
+-
+fstream
+-
+cmath
+-
+map
+-
+algorithm
+-
+AdjacentPoint.h
+/home/bruno/Documents/Clion_Project/cuda_demo/demo3_AdjacentPoint/AdjacentPoint.h
+
